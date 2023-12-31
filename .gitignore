@@ -1,0 +1,5 @@
+__pycache__/
+.ipynb_checkpoints/
+downloaded_music_files/
+auto_downloader_notebook.ipynb
+music_url_list.xlsx
