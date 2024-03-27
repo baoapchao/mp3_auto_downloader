@@ -4,7 +4,8 @@ import os
 import sys
 
 music_download_folder = 'downloaded_music_files'
-music_url_list_excel_file = 'sample_music_url_list.xlsx'
+
+music_url_list_excel_file = 'music_url_list.xlsx'
 
 def download_youtube_audios_return_title(url):
     yt = pt.YouTube(url, use_oauth=True, allow_oauth_cache=True)
@@ -32,11 +33,11 @@ def get_url_list_and_download_audios():
         titlecell = ws.cell(row = x, column = 2)
         titlecell.value =  title
         wb.save(music_url_list_excel_file)
-        
+     
 get_url_list_and_download_audios()
 
-for filename in os.listdir(folder):
-    infilename = os.path.join(folder,filename)
+for filename in os.listdir(music_download_folder):
+    infilename = os.path.join(music_download_folder,filename)
     if not os.path.isfile(infilename): continue
     if '.mp3' in filename: continue
     oldbase = os.path.splitext(filename)
