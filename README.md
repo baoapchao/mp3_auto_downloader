@@ -1,4 +1,6 @@
-### Usage:
+### Description
+This is a tool that allows you to download music files by input youtube urls into an Excel workbook.
+### Usage
 1. Install requirements.txt
 2. Add your song's youtube url in the sample_music_url_list.xlsx file
 3. Rename sample_music_url_list.xlsx to music_url_list.xlsx
